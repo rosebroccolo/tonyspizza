@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, make_response
-import sqlite3
-from flask import g
+from flask import Flask, make_response, request, render_template
+from flask_restful import Resource, Api
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLite_DATABASE_URI'] = '//sqlite:/identifier.sqlite'
-db = SQLite(app)
+api = Api(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/rosebroccolo/Downloads/data.db'
+db = SQLAlchemy(app)
 
 if __name__ == '__main__':
     app.run(debug=True)
@@ -30,26 +31,25 @@ def login():
     else:
         return render_template('register.html')
 
-
 def __repr__(self):
     return '<User %r>' % self.name
 
 class UserModel(Resource):
-def get(user_id):
-    user = User.query.filter_by(userid=user_id).first()
-    if user is None:
-        return make_response("no user matching that id", 404)
-    return {'user_id': user.userid, 'username': user.username, 'email': user.email, 'password': user.password}
+    def get(user_id):
+        user = User.query.filter_by(userid=user_id).first()
+        if user is None:
+            return make_response("no user matching that id", 404)
+        return {'user_id': user.userid, 'username': user.username, 'email': user.email, 'password': user.password}
 
 
-def post(self, user_id):
+"""def post(self, user_id):
     username_param = request.form['username']
     email_param = request.form['email']
     password_param = request.form['password']
     new_user = User(userid=user_id, username=username_param, email=email_param, password=password_param,
     db.session.add(new_user)
     db.session.commit()
-    return make_response({'user_id': user_id, 'username': username_param, 'email': email_param, 'password': password_param}, 201)
+    return make_response({'user_id': user_id, 'username': username_param, 'email': email_param, 'password': password_param}, 201)"""
 
 
 def put(self, user_id):
@@ -65,6 +65,23 @@ def put(self, user_id):
                               'password': user.password}, 201)
     else:
         return make_response("no user matching that id", 404)
+
+
+def delete(self, user_id):
+        user = User.query.filter_by(userid=user_id).first()
+
+        if user is not None:
+            db.session.delete(user)
+            db.session.commit()
+            return make_response({'user_id': user.userid, 'username':user.username, 'email':user.email, 'password':user.password}, 202)
+            return make_response("deleted", 202)
+        else:
+            return make_response("no user matching that id", 404)
+
+
+api.add_resource(UserModel, '/<string:user_id>')
+
+
 
 """@app.route("/login", methods=["GET", "POST"])
 def login():
