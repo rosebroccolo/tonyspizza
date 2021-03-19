@@ -23,7 +23,6 @@ class User(db.Model):
 def hello_world():
     return render_template('index.html')
 
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -34,22 +33,23 @@ def login():
 def __repr__(self):
     return '<User %r>' % self.name
 
-class UserModel(Resource):
+class User(Resource):
     def get(user_id):
         user = User.query.filter_by(userid=user_id).first()
         if user is None:
             return make_response("no user matching that id", 404)
+
         return {'user_id': user.userid, 'username': user.username, 'email': user.email, 'password': user.password}
 
 
-"""def post(self, user_id):
+def post(self, user_id):
     username_param = request.form['username']
     email_param = request.form['email']
     password_param = request.form['password']
-    new_user = User(userid=user_id, username=username_param, email=email_param, password=password_param,
+    new_user = User(userid=user_id, username=username_param, email=email_param, password=password_param)
     db.session.add(new_user)
     db.session.commit()
-    return make_response({'user_id': user_id, 'username': username_param, 'email': email_param, 'password': password_param}, 201)"""
+    return make_response({'user_id': user_id, 'username': username_param, 'email': email_param, 'password': password_param}, 201)
 
 
 def put(self, user_id):
@@ -79,7 +79,7 @@ def delete(self, user_id):
             return make_response("no user matching that id", 404)
 
 
-api.add_resource(UserModel, '/<string:user_id>')
+api.add_resource(User, '/<string:user_id>')
 
 
 
