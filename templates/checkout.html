@@ -1,10 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link href="{{ url_for('static', filename='/style.css') }}"/>
+    <title>Tony's Pizza</title>
 </head>
 <body>
+<header class = w3-center> <h1>Uncle Tony's Pizza</h1></header>
+<h2 class = w3-center>Checkout</h2>
+<div class="w3-sidebar w3-bar-block w3-light-grey" style="width:25%">
+  <a href="/order" class="w3-bar-item w3-button w3-border-bottom">ORDER</a>
+  <a href="/login" class="w3-bar-item w3-button w3-border-bottom">LOGIN</a>
+  <a href="/register" class="w3-bar-item w3-button">REGISTER</a>
+</div>
+    <div class="pizza">
+        <h3>{{ pizza.name }}</h3>
+        <p> {{ item.price }}</p>
+        <button onclick="getmenuitem()" type="button" class="btn btn-primary">Add to Cart</button>
+     </div>
 
 </body>
 </html>

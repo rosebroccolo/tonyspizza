@@ -1,6 +1,7 @@
-from flask import Flask, make_response, request, render_template, send_from_directory
+from flask import Flask, make_response, request, render_template
 from flask_restful import Resource, Api
 from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__, static_url_path='/static/style.css')
 api = Api(app)
@@ -39,9 +40,6 @@ def order():
 def register():
     return render_template('register.html')
 
-""""@app.route('/login', methods=['GET'])
-def login():
-    return render_template("login.html")"""
 
 
 def __repr__(self):
@@ -103,34 +101,3 @@ if __name__ == '__main__':
 
 
 
-"""@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        uname = request.form["uname"]
-        passw = request.form["passw"]"""
-
-""""login = User.query.filter_by(username=uname, password=passw).first()
-        if login is not None:
-            return redirect(url_for("index.html"))
-        return redirect(url_for("register.html"))
-return render_template("login.html")"""
-
-"""@app.route("/register", methods=["GET", "POST"])
-def register():
-    if request.method == "POST":
-        uname = request.form['uname']
-        mail = request.form['mail']
-        passw = request.form['passw']"""
-
-"""register = user(username=uname, email=mail, password=passw)
-    db.session.add(register)
-    db.session.commit()"""
-
-"""return redirect(url_for("login"))
-
-
-return render_template("register.html")"""
-
-"""if __name__ == "__main__":
-    db.create_all()
-    app.run(debug=True)"""
