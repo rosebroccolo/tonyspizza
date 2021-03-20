@@ -6,37 +6,59 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel = "stylesheet" href="/static/style.css">
-    <title>Tony's Pizza</title>
+    <title>Register</title>
 </head>
 <body>
 <header class = w3-center> <h1>Uncle Tony's Pizza</h1></header>
 
 <div class="w3-sidebar w3-bar-block w3-light-grey" style="width:25%">
-  <a href="index.html" class="w3-bar-item w3-button w3-border-bottom">ORDER</a>
+  <a href="order.html" class="w3-bar-item w3-button w3-border-bottom">ORDER</a>
   <a href="/login" class="w3-bar-item w3-button w3-border-bottom">LOGIN</a>
-  <a href="register.html" class="w3-bar-item w3-button">REGISTER</a>
+  <a href="/register" class="w3-bar-item w3-button">REGISTER</a>
 </div>
 
-
-    <div class="container">
+<div class="container">
         <div class="row" style="margin-top: 40px">
             <div class="col-sm-6">
                 <form method="POST">
                     <div class="form-group">
                       <label for="email">Username : </label>
-                      <input type="text" name="uname" class="form-control" id="uname">
+                      <input type="text" name="uname" class="form-control" id="username">
                     </div>
                     <div class="form-group">
                       <label for="email">Email : </label>
-                      <input type="email" name="mail" class="form-control" id="mail">
+                      <input type="email" name="email" class="form-control" id="email">
                     </div>
                     <div class="form-group">
                       <label for="email">Password : </label>
-                      <input type="password" name="passw" class="form-control" id="passw">
+                      <input type="password" name="password" class="form-control" id="password">
                     </div>
                     <button type="submit" class="btn form-control btn-default">Register</button>
                 </form>
             </div>
         </div>
     </div>
+
+<div class="container width w-50px">
+    <form method="POST">
+        <div class="form-group=">
+            <label for="username">Username : </label>
+            <input type="text" name="username" class="form-control" id="username">
+        </div>
+        <div class="form-group=">
+            <label for="email">Email : </label>
+            <input type="text" name="username" class="form-control" id="username">
+        </div>
+        <div class="form-group">
+            <label for="email">Password : </label>
+            <input type="password" name="password" class="form-control" id="password">
+        </div>
+        <button type="submit" class="btn form-control btn-default">Login</button>
+    </form>
+    </div>
+</div>
+
+
+</body>
+</html>
 

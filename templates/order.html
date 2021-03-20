@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel = "stylesheet" href="/static/style.css">
+   <link rel = "stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link href="index.html">
+    <title>Tony's Pizza - order</title>
+</head>
+<body>
+
+<header class = w3-center> <h1>Uncle Tony's Pizza</h1></header>
+
+<div class="w3-sidebar w3-bar-block w3-light-grey" style="width:25%">
+  <a href="/order" class="w3-bar-item w3-button w3-border-bottom">ORDER</a>
+  <a href="/login" class="w3-bar-item w3-button w3-border-bottom">LOGIN</a>
+  <a href="/register" class="w3-bar-item w3-button">REGISTER</a>
+</div>
+
+
+<div style="margin-left:25%">
+
+    <div class = "w3-container w3-blue"
+center><form name="input" action="#" method="post">
+  <h1>BUILD YOUR OWN</h1>
+    <input type='checkbox' >Cheese
+    <input type='checkbox'>Mushrooms
+    <input type='checkbox'>Pepperoni
+    <input type='checkbox'>Sausage
+    <input type='checkbox'>Onions
+    <input type='checkbox'>Peppers
+    <input type='checkbox'>Tomatoes
+    <input type='checkbox'>Spinach
+    <input type='checkbox'>Chicken
+  <input type="submit" value="Submit" href="">
+</form>
+</div>
+
+
+<div class = "w3-container">
+    <div class="w3 row">
+        <div class="w3-card-4">
+            <div class="w3-container w3-center w3-padding-16">
+                <h3 class = w3-center><strong>Cheese</strong></h3>
+                <a href="#" class="btn btn-primary">Small</a>
+                <a href="#" class="btn btn-primary">Medium</a>
+                <a href="#" class="btn btn-primary">Large</a>
+            </div>
+        </div>
+        <div class="w3-card-4">
+            <div class="w3-container w3-center w3-padding-16">
+                <h3 class = w3-center><strong>Pepperoni</strong></h3>
+                <a href="#" class="btn btn-primary">Small</a>
+                <a href="#" class="btn btn-primary">Medium</a>
+                <a href="#" class="btn btn-primary">Large</a>
+            </div>
+        </div>
+           <div class="w3-card-4">
+            <div class="w3-container w3-center w3-padding-16">
+                <h3 class = w3-center><strong>Veggie</strong></h3>
+                <a href="#" class="btn btn-primary">Small</a>
+                <a href="#" class="btn btn-primary">Medium</a>
+                <a href="#" class="btn btn-primary">Large</a>
+            </div>
+        </div>
+      <div class="w3-card-4">
+            <div class="w3-container w3-center w3-padding-16">
+                <h3 class = w3-center><strong>Sausage</strong></h3>
+                <a href="#" class="btn btn-primary">Small</a>
+                <a href="#" class="btn btn-primary">Medium</a>
+                <a href="#" class="btn btn-primary">Large</a>
+            </div>
+        </div>
+   <div class="w3-card-4">
+            <div class="w3-container w3-center w3-padding-16">
+                <h3 class = w3-center><strong>Tony's</strong></h3>
+                <a href="#" class="btn btn-primary">Small</a>
+                <a href="#" class="btn btn-primary">Medium</a>
+                <a href="#" class="btn btn-primary">Large</a>
+            </div>
+        </div>
+         <div class="w3-card-4">
+            <div class="w3-container w3-center w3-padding-16">
+                <h3 class = w3-center><strong>Hawaiian</strong></h3>
+                <a href="#" class="btn btn-primary">Small</a>
+                <a href="#" class="btn btn-primary">Medium</a>
+                <a href="#" class="btn btn-primary">Large</a>
+            </div>
+        </div>
+         <div class="w3-card-4">
+            <div class="w3-container w3-center w3-padding-16">
+                <h3 class = w3-center><strong>BBQ Chicken</strong></h3>
+                <a href="#" class="btn btn-primary">Small</a>
+                <a href="#" class="btn btn-primary">Medium</a>
+                <a href="#" class="btn btn-primary">Large</a>
+            </div>
+        </div>
+        <div class="w3-card-4">
+            <div class="w3-container w3-center w3-padding-16">
+                <h3 class = w3-center><strong>Breadsticks</strong></h3>
+                <a href="#" class="btn btn-primary">Small</a>
+                <a href="#" class="btn btn-primary">Large</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

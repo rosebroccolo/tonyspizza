@@ -6,137 +6,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel = "stylesheet" href="/static/style.css">
+   <link rel = "stylesheet" href="{{ url_for('static', filename='style.css')}}">
     <title>Tony's Pizza</title>
 </head>
 <body>
 
 <header class = w3-center> <h1>Uncle Tony's Pizza</h1></header>
 
-<div class="w3-sidebar w3-bar-block w3-light-grey" style="width:25%">
-  <a href="index.html" class="w3-bar-item w3-button w3-border-bottom">ORDER</a>
-  <a href="/login" class="w3-bar-item w3-button w3-border-bottom">LOGIN</a>
-  <a href="register.html" class="w3-bar-item w3-button">REGISTER</a>
+<!--<div class="w3-sidebar w3-bar-block w3-light-grey" style="width:25%">
+  <a href="index.html" class="w3-bar-item w3-button w3-border-bottom">ORDER</a>-->
+
+  <a href="/login" class="w3-button w3-round w3-xlarge w3-centered">LOGIN</a>
+
+  <a href="/register" class="w3-button w3-round w3-xlarge w3-centered">REGISTER</a>
+
+ <a href="/order" class="w3-button w3-round w3-xlarge w3-centered">CONTINUE ORDER AS GUEST</a>
 </div>
 
 
-<div style="margin-left:25%">
 
-<div class = "w3-container">
-    <div class="w3 row">
-         <div class="w3-col s4 w3-border-teal w3-center">
-           <!--<div class="card">
-                <div class="card-body">-->
-                    <h5 class="menu-item text-left"><strong>Build Your Own</strong></h5>
-                    <p class="Large text-left">Large - $12.00</p>
-                    <p class="Medium text-left">Medium - $10.00</p>
-                    <p class="Small text-left">Small - $8.00&nbsp;</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="w3-col s4 w3-border-teal w3-center">
-            <div class="card">
-                <div class="card-body">
-                    <h6 class="menu-item text-left"><strong>Cheese</strong></h6>
-                    <p class="Large text-left">Large - $12.00</p>
-                    <p class="Medium text-left">Medium - $10.00</p>
-                    <p class="Small text-left">Small - $8.00&nbsp;</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="w3-col s4 w3-border-teal w3-center">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="menu-item text-left"><strong>Pepperoni</strong></h5>
-                    <p class="Large text-left">Large - $12.00</p>
-                    <p class="Medium text-left">Medium - $10.00</p>
-                    <p class="Small text-left">Small - $8.00&nbsp;</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="menu-item text-left"><strong>Sausage</strong></h5>
-                    <p class="Large text-left">Large - $12.00</p>
-                    <p class="Medium text-left">Medium - $10.00</p>
-                    <p class="Small text-left">Small - $8.00&nbsp;</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="menu-item text-left"><strong>Veggie</strong></h5>
-                    <p class="Large text-left">Large - $12.00</p>
-                    <p class="Medium text-left">Medium - $10.00</p>
-                    <p class="Small text-left">Small - $8.00&nbsp;</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row align-items-start">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="menu-item text-left"><strong>Tony's</strong></h5>
-                    <p class="Large text-left">Large - $12.00</p>
-                    <p class="Medium text-left">Medium - $10.00</p>
-                    <p class="Small text-left">Small - $8.00&nbsp;</p>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="menu-item text-left"><strong>Hawaiian</strong></h6>
-                        <p class="Large text-left">Large - $12.00</p>
-                        <p class="Medium text-left">Medium - $10.00</p>
-                        <p class="Small text-left">Small - $8.00&nbsp;</p>
-                        <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="menu-item text-left"><strong>Meat Lover's</strong></h5>
-                        <p class="Large text-left">Large - $12.00</p>
-                        <p class="Medium text-left">Medium - $10.00</p>
-                        <p class="Small text-left">Small - $8.00&nbsp;</p>
-                        <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h6 class="menu-item text-left"><strong>BBQ Chicken</strong></h6>
-                        <p class="Large text-left">Large - $12.00</p>
-                        <p class="Medium text-left">Medium - $10.00</p>
-                        <p class="Small text-left">Small - $8.00&nbsp;</p>
-                        <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="menu-item text-left"><strong>Breadsticks</strong></h5>
-                        <p class="Large text-left">Large - $12.00</p>
-                        <p class="Medium text-left">Medium - $10.00</p>
-                        <p class="Small text-left">Small - $8.00&nbsp;</p>
-                        <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div class = "w3-container w3-margins">
+<div style="vertical-align: center">
+
+<!--<button class="w3-button w3-round w3-xlarge w3-centered" href="/login">Login/Register</a>
+</button>
+
+<button class="w3-button w3-round w3-xlarge w3-centered" href="#order.html">Continue as guest</a>
+</button>-->
+
 </div>
 </div>
 </body>

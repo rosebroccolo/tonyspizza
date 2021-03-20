@@ -7,6 +7,3 @@ CREATE TABLE User (
     password TEXT NOT NULL
 );
 
-db session add new user (
-
-)
